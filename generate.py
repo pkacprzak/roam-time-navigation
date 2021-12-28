@@ -57,11 +57,11 @@ def get_days_of_week(week):
 
 def format_day(d, alias):
     day_number = f"{d.day}"
-    if d.day % 10 == 1:
+    if d.day != 11 and d.day % 10 == 1:
         day_number += "st"
-    elif d.day % 10 == 2:
+    elif d.day != 12 and d.day % 10 == 2:
         day_number += "nd"
-    elif d.day % 10 == 3:
+    elif d.day != 13 and d.day % 10 == 3:
         day_number += "rd"
     else:
         day_number += "th"
